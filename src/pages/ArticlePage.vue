@@ -1,11 +1,16 @@
 <template>
-  <div>The id parameter vue is {{ $route.params.id }}</div>
-  <div v-if="article">
-    {{ article.title }}
+  <div>
+    <div v-if="article">
+      <h3>{{ article.title }}</h3>
+      <RouterLink :to="{ name: 'articles.comments', params: { id } }"
+        >See Comments</RouterLink
+      >|
+      <RouterLink :to="{ name: 'articles.author' }">About Author</RouterLink>
+    </div>
   </div>
 </template>
 <script>
-import { articles } from './../data'
+import { articles } from '../data'
 
 export default {
   props: { id: Number },

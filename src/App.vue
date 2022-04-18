@@ -3,19 +3,15 @@
     <RouterLink :to="{ name: 'home' }">Home Page</RouterLink>
   </div>
   <div><RouterLink :to="{ name: 'about' }">About Page</RouterLink></div>
-  <div>
-    <RouterLink :to="{ name: 'articles', params: { id: 1 } }"
-      >Articles Page</RouterLink
-    >
-  </div>
+
   <RouterView />
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   components: {},
-};
+}
 </script>
 
 <style></style>
